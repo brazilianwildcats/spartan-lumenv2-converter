@@ -10,7 +10,7 @@ This tool fixes compatibility and playback issues by trimming, boosting audio, a
 
 - 🎬 Cuts the **first 0.5 seconds** (~12 frames) with frame-accurate trimming
 - 🔊 Increases audio volume by **+10 dB**
-- 🎧 Converts audio to **AAC** (320 kbps, mono, 32 kHz)
+- 🎧 Converts audio to **AAC** (256 kbps, mono, 32 kHz)
 - 🎥 **Preserves the original video** (no re-encoding)
 - 🕒 Keeps **original timestamps and metadata** using PowerShell
 - 📁 Leaves the original `.mov` file **untouched**
