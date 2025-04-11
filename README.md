@@ -32,6 +32,7 @@ This tool fixes compatibility and playback issues by trimming, boosting audio, a
    Example: C:\FFmpeg\bin
 6. Click **OK** in all windows to save changes.
 7. To test it: open **Command Prompt** and type:
+   ffmpeg -version
 
 ---
 
