@@ -21,7 +21,7 @@ for %%f in (*.mov) do (
         "try { " ^
         "    Write-Host ('Processing: ' + $inputFile); " ^
         "    $originalTimestamp = (Get-Item -LiteralPath $inputFile).LastWriteTime; " ^
-        "    $ffmpegCmd = { & ffmpeg -y -accurate_seek -i $inputFile -ss 0.5 -c:v copy -af 'volume=10dB' -c:a aac -b:a 320k -ar 32000 -ac 1 -map_metadata 0 -movflags use_metadata_tags $outputFile }; " ^
+        "    $ffmpegCmd = { & ffmpeg -y -accurate_seek -i $inputFile -ss 0.5 -c:v copy -af 'volume=10dB' -c:a aac -b:a 256k -ar 32000 -ac 1 -map_metadata 0 -movflags use_metadata_tags $outputFile }; " ^
         "    $duration = Measure-Command { Invoke-Command $ffmpegCmd }; " ^
         "    if ($LASTEXITCODE -ne 0) { throw ('ffmpeg failed with exit code: ' + $LASTEXITCODE) }; " ^
         "    $logMsg = '{0} - {1:N3} seconds' -f $inputFile, $duration.TotalSeconds; " ^
